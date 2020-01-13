@@ -1,15 +1,16 @@
 const bubbleSort = (arr) => {
   const len = arr.length;
+  const locArr = arr;
   for (let i = 0; i < len; i += 1) {
     for (let j = 0; j < len - i; j += 1) {
-      if (arr[j] > arr[j + 1]) {
-        let tmp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = tmp;
+      if (locArr[j] > locArr[j + 1]) {
+        const tmp = locArr[j];
+        locArr[j] = locArr[j + 1];
+        locArr[j + 1] = tmp;
       }
     }
   }
-  return arr;
+  return locArr;
 };
 
 // testing
