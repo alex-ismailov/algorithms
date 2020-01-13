@@ -1,15 +1,16 @@
 const insertionSort = (arr) => {
   const len = arr.length;
+  const locArr = arr;
   for (let i = 0; i < len; i += 1) { // проходимся по каждому элемента массива
-    let currElem = arr[i]; // значение текущего элемента
+    const currElem = locArr[i]; // значение текущего элемента
     let prevIndex = i - 1; // значение предыдущего элемента
-    while (prevIndex >= 0 && arr[prevIndex] > currElem) { // пока индекс предыдущего элемента >= 0 и предыдущий больше текущего 
-      arr[prevIndex + 1] = arr[prevIndex]; // заменяем текущий не предыдущий
+    while (prevIndex >= 0 && locArr[prevIndex] > currElem) { // пока индекс предыдущего элемента >= 0 и предыдущий больше текущего
+      locArr[prevIndex + 1] = locArr[prevIndex]; // заменяем текущий не предыдущий
       prevIndex -= 1; // декрементируем предыдущий индекс
     }
-    arr[prevIndex + 1] = currElem; // меняем предыдущий элемент на текущий
+    locArr[prevIndex + 1] = currElem; // меняем предыдущий элемент на текущий
   }
-  return arr;
+  return locArr;
 };
 
 // testing
