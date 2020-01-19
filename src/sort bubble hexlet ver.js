@@ -1,5 +1,5 @@
 const bubbleSort = (arr) => {
-  let size = arr.length;
+  let size = arr.length - 1; // нет смысла доходить до последнего элемента
   let swapped;
   do {
     swapped = false;
