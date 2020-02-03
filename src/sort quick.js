@@ -5,7 +5,12 @@ const swap = (items, left, right) => { // данная функция меняе
 };
 
 const partition = (items, left, right) => {
-  const pivot = items[Math.floor((left + right) / 2)]; // в качестве опорного элемента берем элемент из середины
+  /* в качестве опорного элемента (pivot) берем элемент из середины 
+  (или первый или последний или случайный) */ 
+  // const pivot = items[Math.floor((left + right) / 2)];
+  // const pivot = items[left]; // good
+  // const pivot = items[right - 1]; // good
+  const pivot = items[Math.floor(Math.random() * (right - left) + left)]; // good
   let leftPointer = left;
   let rightPointer = right;
   while (leftPointer <= rightPointer) { // пока левый и правый указатели не пересекли друг друга
@@ -40,7 +45,7 @@ const quickSort = (items, left = 0, right = items.length - 1) => {
 
 // testing
 const arr1 = [9, 6, 3, 4, 1, 2, 8, 7, 5];
-const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 1];
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(quickSort(arr1));
 console.log(quickSort(arr2));
