@@ -7,12 +7,12 @@
  * @return {Number} index of desired item in array
 */
 
-export default (coll, item) => {
+export default (itemsColl, item) => {
   const iterate = (coll, begin, end) => {
     if (begin > end) {
       return null;
     }
-  
+
     const middle = Math.floor((begin + end) / 2);
     if (coll[middle] === item) {
       return coll[middle];
@@ -20,9 +20,9 @@ export default (coll, item) => {
     if (coll[middle] > item) {
       return iterate(coll, begin, middle - 1);
     }
-  
+
     return iterate(coll, middle + 1, end);
   };
 
-  return iterate(coll, 0, coll.length - 1);
+  return iterate(itemsColl, 0, itemsColl.length - 1);
 };
