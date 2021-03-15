@@ -5,7 +5,6 @@ const findMinElemIndex = (arr) => {
   return arr.indexOf(minElem);
 };
 
-
 const insertionSort = (arr) => {
   const iter = (arr, newArr) => {
     if (arr.length < 2) {
@@ -19,7 +18,6 @@ const insertionSort = (arr) => {
 
   return iter(arr, []).flat();
 };
-
 
 /* testing */
 const arr = [];

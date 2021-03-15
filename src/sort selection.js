@@ -1,5 +1,5 @@
 const swap = (arr, left, right) => {
-  let tmp = arr[left];
+  const tmp = arr[left];
   arr[left] = arr[right];
   arr[right] = tmp;
 };

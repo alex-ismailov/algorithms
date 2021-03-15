@@ -4,7 +4,7 @@ const findMinElIndex = (arr, begin, minElIndex) => {
       if (index < begin) {
         return acc;
       }
-      return curr < acc ? curr : acc
+      return curr < acc ? curr : acc;
     }, arr[minElIndex]);
 
   return arr.indexOf(minElem);
@@ -44,7 +44,6 @@ const selectionSort = (arr, begin = 0, end = arr.length - 1) => {
 
   return iter(begin);
 };
-
 
 /* testing */
 const arr = [];

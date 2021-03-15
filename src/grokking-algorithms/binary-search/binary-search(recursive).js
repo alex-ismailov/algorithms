@@ -16,9 +16,8 @@ const binarySearch = (item, arr, begin = 0, end = arr.length - 1) => {
     }
     if (guess > item) {
       return binarySearch(item, arr, begin, mid - 1);
-    } else {
-      return binarySearch(item, arr, mid + 1, end);
     }
+    return binarySearch(item, arr, mid + 1, end);
   }
   return null;
 };

@@ -1,12 +1,12 @@
 const swap = (items, left, right) => { // данная функция меняет два элемента массива местами
-  let tmp = items[left];
+  const tmp = items[left];
   items[left] = items[right];
   items[right] = tmp;
 };
 
 const partition = (items, left, right) => {
-  /* в качестве опорного элемента (pivot) берем элемент из середины 
-  (или первый или последний или случайный) */ 
+  /* в качестве опорного элемента (pivot) берем элемент из середины
+  (или первый или последний или случайный) */
   // const pivot = items[Math.floor((left + right) / 2)];
   // const pivot = items[left]; // good
   // const pivot = items[right - 1]; // good
@@ -14,17 +14,17 @@ const partition = (items, left, right) => {
   let leftPointer = left;
   let rightPointer = right;
   while (leftPointer <= rightPointer) { // пока левый и правый указатели не пересекли друг друга
-     while (items[leftPointer] < pivot) { // если items[leftPointer] < pivot, то это значит, что левый (меньший) элемент отсортирован относительно pivot
-       leftPointer += 1; // и мы сдвигаем левый указатель направо к опорному элементу (к pivot(у)) в поисках нового не отсортированного элемента
-     }
-     while (items[rightPointer] > pivot) { // если items[rightPointer] < pivot, то это значит, что правый (больший) элемент отсортирован относительно pivot
-       rightPointer -= 1; // сдвигаем правый указатель налево к опорному элементу (к pivot(у)), в поисках нового не отсортированного элемента
-     }
-     if (leftPointer <= rightPointer) { // если в результате сдвигов левый указатель меньше или равен правому, то это значит, что еще остались не отсортированные элементы
-       swap(items, leftPointer, rightPointer); // переносим меньший элемент налево, а больший направо
-       leftPointer += 1; // двигаем указатели в поисках новых не отсортированных элементов
-       rightPointer -= 1;
-     }
+    while (items[leftPointer] < pivot) { // если items[leftPointer] < pivot, то это значит, что левый (меньший) элемент отсортирован относительно pivot
+      leftPointer += 1; // и мы сдвигаем левый указатель направо к опорному элементу (к pivot(у)) в поисках нового не отсортированного элемента
+    }
+    while (items[rightPointer] > pivot) { // если items[rightPointer] < pivot, то это значит, что правый (больший) элемент отсортирован относительно pivot
+      rightPointer -= 1; // сдвигаем правый указатель налево к опорному элементу (к pivot(у)), в поисках нового не отсортированного элемента
+    }
+    if (leftPointer <= rightPointer) { // если в результате сдвигов левый указатель меньше или равен правому, то это значит, что еще остались не отсортированные элементы
+      swap(items, leftPointer, rightPointer); // переносим меньший элемент налево, а больший направо
+      leftPointer += 1; // двигаем указатели в поисках новых не отсортированных элементов
+      rightPointer -= 1;
+    }
   }
   return leftPointer;
 };

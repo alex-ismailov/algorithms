@@ -27,9 +27,9 @@ const isBracketStructureBalanced = (expression) => {
 };
 
 // testing
-console.log(isBracketStructureBalanced('[()]'));       // true
-console.log(isBracketStructureBalanced('{<>}}'));      // false
-console.log(isBracketStructureBalanced('['));          // false
-console.log(isBracketStructureBalanced('}{'));         // false
+console.log(isBracketStructureBalanced('[()]')); // true
+console.log(isBracketStructureBalanced('{<>}}')); // false
+console.log(isBracketStructureBalanced('[')); // false
+console.log(isBracketStructureBalanced('}{')); // false
 console.log(isBracketStructureBalanced('(([<>]){})')); // true
-console.log(isBracketStructureBalanced('([{]})'));     // false
+console.log(isBracketStructureBalanced('([{]})')); // false
