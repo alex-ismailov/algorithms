@@ -9,7 +9,7 @@ const swap = (coll, leftIndex, rightIndex) => {
 export default (coll) => {
   for (let i = 0; i < coll.length; i += 1) {
     let minIndex = i;
-    for (let ii = i; ii < coll.length; ii += 1) {
+    for (let ii = i + 1; ii < coll.length; ii += 1) {
       if (coll[ii] < coll[minIndex]) {
         minIndex = ii;
       }
