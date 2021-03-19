@@ -1,3 +1,5 @@
+/* eslint no-restricted-syntax: 0 */
+
 const openBrackets = ['(', '{', '[', '<'];
 const pairBrackets = ['()', '{}', '[]', '<>'];
 
