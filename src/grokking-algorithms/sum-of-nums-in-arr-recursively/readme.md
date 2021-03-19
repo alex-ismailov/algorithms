@@ -1,0 +1,1 @@
+npx -n --experimental-vm-modules jest --watchAll src/grokking-algorithms/sum-of-nums-in-arr-recursively
