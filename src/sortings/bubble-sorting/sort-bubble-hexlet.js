@@ -1,3 +1,5 @@
+/* eslint no-param-reassign: 0 */
+
 const bubbleSort = (arr) => {
   let size = arr.length - 1; // нет смысла доходить до последнего элемента
   let swapped;
