@@ -1,0 +1,1 @@
+npx -n --experimental-vm-modules jest --watchAll src/sortings/quick-sort
